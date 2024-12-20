@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1267</width>
-    <height>475</height>
+    <width>1295</width>
+    <height>493</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1295</width>
+    <height>493</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1295</width>
+    <height>493</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -18,16 +30,19 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
-      <width>1091</width>
-      <height>441</height>
+      <y>10</y>
+      <width>1121</width>
+      <height>471</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Support.PNG</pixmap>
+     <pixmap>SupportNew.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -84,8 +99,8 @@
    <widget class="QLabel" name="length_3">
     <property name="geometry">
      <rect>
-      <x>59</x>
-      <y>410</y>
+      <x>50</x>
+      <y>400</y>
       <width>41</width>
       <height>21</height>
      </rect>
@@ -108,8 +123,8 @@
    <widget class="QLabel" name="length_4">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>360</y>
+      <x>710</x>
+      <y>350</y>
       <width>41</width>
       <height>21</height>
      </rect>
@@ -132,8 +147,8 @@
    <widget class="QLabel" name="radius_1">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>220</y>
+      <x>160</x>
+      <y>230</y>
       <width>41</width>
       <height>21</height>
      </rect>
@@ -156,8 +171,8 @@
    <widget class="QLabel" name="radius_2">
     <property name="geometry">
      <rect>
-      <x>590</x>
-      <y>220</y>
+      <x>650</x>
+      <y>230</y>
       <width>41</width>
       <height>21</height>
      </rect>
@@ -180,8 +195,8 @@
    <widget class="QLabel" name="radius_3">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>220</y>
+      <x>890</x>
+      <y>230</y>
       <width>41</width>
       <height>21</height>
      </rect>
@@ -204,10 +219,10 @@
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>1120</x>
+      <x>1150</x>
       <y>20</y>
       <width>141</width>
-      <height>451</height>
+      <height>461</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -220,7 +235,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>50</y>
+       <y>70</y>
        <width>51</width>
        <height>21</height>
       </rect>
@@ -244,7 +259,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>90</y>
+       <y>100</y>
        <width>51</width>
        <height>21</height>
       </rect>
@@ -292,7 +307,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>170</y>
+       <y>160</y>
        <width>51</width>
        <height>21</height>
       </rect>
@@ -316,7 +331,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>220</y>
+       <y>250</y>
        <width>51</width>
        <height>21</height>
       </rect>
@@ -340,7 +355,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>260</y>
+       <y>280</y>
        <width>51</width>
        <height>21</height>
       </rect>
@@ -364,7 +379,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>300</y>
+       <y>310</y>
        <width>51</width>
        <height>21</height>
       </rect>
@@ -388,20 +403,26 @@
      <property name="geometry">
       <rect>
        <x>60</x>
-       <y>50</y>
+       <y>70</y>
        <width>62</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="value">
+      <double>2.000000000000000</double>
      </property>
     </widget>
     <widget class="QDoubleSpinBox" name="len_box_2">
      <property name="geometry">
       <rect>
        <x>60</x>
-       <y>90</y>
+       <y>100</y>
        <width>62</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="value">
+      <double>1.000000000000000</double>
      </property>
     </widget>
     <widget class="QDoubleSpinBox" name="len_box_3">
@@ -413,52 +434,67 @@
        <height>22</height>
       </rect>
      </property>
+     <property name="value">
+      <double>10.000000000000000</double>
+     </property>
     </widget>
     <widget class="QDoubleSpinBox" name="len_box_4">
      <property name="geometry">
       <rect>
        <x>60</x>
-       <y>170</y>
+       <y>160</y>
        <width>62</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="value">
+      <double>10.000000000000000</double>
      </property>
     </widget>
     <widget class="QDoubleSpinBox" name="rad_box_1">
      <property name="geometry">
       <rect>
        <x>60</x>
-       <y>220</y>
+       <y>250</y>
        <width>62</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="value">
+      <double>2.000000000000000</double>
      </property>
     </widget>
     <widget class="QDoubleSpinBox" name="rad_box_2">
      <property name="geometry">
       <rect>
        <x>60</x>
-       <y>260</y>
+       <y>280</y>
        <width>62</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="value">
+      <double>1.000000000000000</double>
      </property>
     </widget>
     <widget class="QDoubleSpinBox" name="rad_box_3">
      <property name="geometry">
       <rect>
        <x>60</x>
-       <y>300</y>
+       <y>310</y>
        <width>62</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="value">
+      <double>0.500000000000000</double>
      </property>
     </widget>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>10</y>
+       <y>0</y>
        <width>81</width>
        <height>21</height>
       </rect>
@@ -486,7 +522,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>350</y>
+       <y>360</y>
        <width>121</width>
        <height>41</height>
       </rect>
@@ -504,7 +540,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>400</y>
+       <y>410</y>
        <width>121</width>
        <height>41</height>
       </rect>
@@ -518,18 +554,140 @@
       <string>Export</string>
      </property>
     </widget>
+    <widget class="QDoubleSpinBox" name="len_box_0">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>62</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="value">
+      <double>1.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="len_0">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>40</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cascadia Code</family>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>L0:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="rad_0">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>220</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cascadia Code</family>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>R0:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="rad_box_0">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>220</y>
+       <width>62</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="value">
+      <double>1.000000000000000</double>
+     </property>
+    </widget>
    </widget>
    <widget class="Line" name="line">
     <property name="geometry">
      <rect>
-      <x>1100</x>
+      <x>1130</x>
       <y>20</y>
       <width>20</width>
-      <height>441</height>
+      <height>461</height>
      </rect>
     </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="length_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cascadia Code</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>L0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="radius_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cascadia Code</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>R0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

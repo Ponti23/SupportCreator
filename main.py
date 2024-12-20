@@ -24,11 +24,13 @@ class UI(QMainWindow):
         self.show()
 
         # Find the double spin boxes
+        self.len_0 = self.findChild(QDoubleSpinBox, "len_box_0")
         self.len_1 = self.findChild(QDoubleSpinBox, "len_box_1")
         self.len_2 = self.findChild(QDoubleSpinBox, "len_box_2")
         self.len_3 = self.findChild(QDoubleSpinBox, "len_box_3")
         self.len_4 = self.findChild(QDoubleSpinBox, "len_box_4")
 
+        self.rad_0 = self.findChild(QDoubleSpinBox, "rad_box_0")
         self.rad_1 = self.findChild(QDoubleSpinBox, "rad_box_1")
         self.rad_2 = self.findChild(QDoubleSpinBox, "rad_box_2")
         self.rad_3 = self.findChild(QDoubleSpinBox, "rad_box_3")
@@ -43,31 +45,38 @@ class UI(QMainWindow):
     
 
     def preview_shape(self):
+        L0 = self.len_0.value()
         L1 = self.len_1.value()
         L2 = self.len_2.value()
         L3 = self.len_3.value()
         L4 = self.len_4.value()
+        R0 = self.rad_0.value()
         R1 = self.rad_1.value()
         R2 = self.rad_2.value()
         R3 = self.rad_3.value()
 
         self.vertices = np.array([
-            [0, 0],  
-            [R1, 0],  
-            [R1, L1],  
-            [R2, L3-L2],  
-            [R2, L3],  
-            [R3, L3],  
-            [R3, L3+L4],  
-            [0, L3+L4],
-            [0, 0]
+            [0,0],
+            [R0,0],
+            [R0,L0],
+            [R1,L0],
+            [R1,L0+L1],
+            [R2,L0+L3-L2],
+            [R2,L0+L3],
+            [R3,L0+L3],
+            [R3,L0+L3+L4],
+            [0,L0+L3+L4],
+            [0,0]
+
         ])
 
         self.built_shape = build_shape(self.vertices)
 
-        self.built_shape.show()
+        self.built_shape.show(resolution=(800,800), flags={'cull': False})
 
     def export_file(self):
+        self.built_shape = build_shape(self.vertices)
+
         file_path, _ = QFileDialog.getSaveFileName(
             self, "Save File", "", "Mesh Files (*.stl *.obj *.step)"
         )
@@ -85,7 +94,7 @@ class UI(QMainWindow):
             print(f"OBJ file saved at {obj_path}")
 
             # Export STEP (requires cadquery or similar library)
-            try:
+            """try:
                 from trimesh.exchange.export import export_mesh
                 step_path = f"{base_name}.step"
                 with open(step_path, 'wb') as step_file:
@@ -94,9 +103,10 @@ class UI(QMainWindow):
             except ImportError:
                 print("STEP export requires additional libraries like cadquery.")
             except Exception as e:
-                print(f"Failed to export STEP file: {e}")
+                print(f"Failed to export STEP file: {e}")"""
 
 
+    
 
 app = QApplication(sys.argv)
 window = UI()
